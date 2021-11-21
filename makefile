@@ -11,5 +11,8 @@ my_mat.o: my_mat.c my_mat.h
 libmy_mat.a: my_mat.o my_mat.h
 	ar -rcs -o libmy_mat.a my_mat.o
 
+connections: main.o libmy_mat.a 
+	gcc $(FLAG) -o connections main.o libmy_mat.a -lm
+
 clean:
 	rm -f *.o *.a 
