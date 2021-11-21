@@ -1,6 +1,6 @@
 FLAG = -Wall -g
 
-all: main.o my_mat.o libmy_mat.a
+all: main.o my_mat.o libmy_mat.a connections
 
 main.o: main.c my_mat.h
 	gcc $(FLAG) -c main.c 
