@@ -23,6 +23,7 @@ for (int i = 0; i < 10; i++)
     // //         } 
 
     //     }
+        scanf("%d" , &input);
         mat[i][j] = input;
     } 
 }
