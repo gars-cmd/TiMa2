@@ -1,24 +1,25 @@
 #include <stdio.h>
 #include "my_mat.h"
 
-int matrix[10][10];
 
-void toString(int mat[10][10])
-{
-    for (int i = 0; i < 10; i++)
-    {
-        for (int j = 0; j < 10; j++)
-        {
-            printf("%d     ", matrix[i][j]);
-        }
-        printf("\n");
-    }
+
+// void toString(int mat[10][10])
+// {
+//     for (int i = 0; i < 10; i++)
+//     {
+//         for (int j = 0; j < 10; j++)
+//         {
+//             printf("%d     ", matrix[i][j]);
+//         }
+//         printf("\n");
+//     }
     
-}
+// }
 
 
 int main(int argc, char const *argv[])
 {
+    int matrix[10][10];
     int ans;
     char input;
     scanf("%c" , &input);
