@@ -3,12 +3,11 @@
 
 #define True 1
 #define False 0
-#define MAX_VALUE 2147483647
 
 void func1(int mat[10][10])
 {
 initialization(mat);
-int input = MAX_VALUE;
+int input;
 
 for (int i = 0; i < 10; i++)
 {
@@ -28,6 +27,7 @@ for (int i = 0; i < 10; i++)
     } 
 }
 fillTheGraph(mat);
+
 }
 
 
@@ -39,7 +39,14 @@ void fillTheGraph(int mat[10][10])
         {
             for (int j = 0; j < 10; j++)
             {
+                if (mat[i][j]==0)
+                {
+                continue;
+                }
+                else
+                {
                 mat[i][j] = min(mat[i][j] , (mat[i][k] + mat[k][j]) );
+                }
             }
             
         }
@@ -62,7 +69,7 @@ void initialization(int mat[10][10])
     {
         for (int j = 0; j < 10; j++)
         {
-            mat[i][j] = MAX_VALUE;;
+            mat[i][j] = 0;
         }
         
     }
@@ -76,7 +83,7 @@ int func2(int mat[10][10] )
     int j;
     scanf("%d" , &i);
     scanf("%d" , &j);
-    return (mat[i][j]==MAX_VALUE?False:True);
+    return (mat[i][j]==0?False:True);
 }
 
 
@@ -86,6 +93,6 @@ int func3( int mat[10][10])
     int j;
     scanf("%d" , &i);
     scanf("%d" , &j);
-    return (mat[i][j]==MAX_VALUE?-1:mat[i][j]);
+    return (mat[i][j]==0?-1:mat[i][j]);
 }
 

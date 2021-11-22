@@ -3,8 +3,23 @@
 
 int matrix[10][10];
 
+void toString(int mat[10][10])
+{
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            printf("%d     ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+    
+}
+
+
 int main(int argc, char const *argv[])
 {
+    int ans;
     char input;
     scanf("%c" , &input);
     while (input!='D')
@@ -12,27 +27,30 @@ int main(int argc, char const *argv[])
         if (input =='A')
         {
             func1(matrix);
+            //toString(matrix);
+            
         }
         else if (input == 'B')
         {
-            func2(matrix)==1?printf("True"):printf("False");
+            ans = func2(matrix);
+            ans==1?printf("True"):printf("False");
         
         }
     else if (input == 'C') 
     {
-        int ans = func3(matrix);
+        ans = func3(matrix);
         printf("%d" , ans);
     }
-    else if(input == 'D')
+    if(input == 'D')
     {
     return 0;    
     }       
     else
     {
+
         scanf("%c" , &input);
     }
     
     }
-    
-    
+    return 0;
 }
