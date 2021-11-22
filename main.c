@@ -40,11 +40,7 @@ int main(int argc, char const *argv[])
     {
         ans = func3(matrix);
         printf("%d\n" , ans);
-    }
-    if(input == 'D')
-    {
-    return 0;    
-    }       
+    }     
         scanf("%c" , &input);
     
     }
