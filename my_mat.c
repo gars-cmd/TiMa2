@@ -43,6 +43,10 @@ void fillTheGraph(int mat[10][10])
                 {
                 continue;
                 }
+                if (mat[i][j]==0 && i!=j)
+                {
+                    mat[i][j] = mat[i][k]+mat[k][j];
+                }
                 else
                 {
                 mat[i][j] = min(mat[i][j] , (mat[i][k] + mat[k][j]) );
@@ -79,6 +83,7 @@ void initialization(int mat[10][10])
 
 int func2(int mat[10][10] )
 {
+    
     int i;
     int j;
     scanf("%d" , &i);
