@@ -39,7 +39,7 @@ void fillTheGraph(int mat[10][10])
         {
             for (int j = 0; j < 10; j++)
             {
-                if (mat[i][j]==0)
+                if (mat[i][k]==0 || mat[k][j]==0)
                 {
                 continue;
                 }
