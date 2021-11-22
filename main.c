@@ -1,56 +1,55 @@
 #include <stdio.h>
-#include <stdio.h>
 #include "my_mat.h"
 
-int main()
+
+
+// void toString(int mat[10][10])
+// {
+//     for (int i = 0; i < 10; i++)
+//     {
+//         for (int j = 0; j < 10; j++)
+//         {
+//             printf("%d     ", matrix[i][j]);
+//         }
+//         printf("\n");
+//     }
+    
+// }
+
+
+int main(int argc, char const *argv[])
 {
-   int mat[10][10];
-   
-    char user;
-    scanf("%c", &user);
-    while (user != 'D')
+    int matrix[10][10];
+    int ans;
+    char input;
+    scanf("%c" , &input);
+    while (input!='D')
     {
-        if (user == 'A')
+        if (input =='A')
         {
-            func1(mat);
-            
+            func1(matrix);
+            //toString(matrix); 
         }
-        else if (user == 'B')
+        else if (input == 'B')
         {
-            int ans=func2(mat);
-            if (ans == 0)
-        {
-            printf("False");
-            printf("\n");
-        }
-    else
-        {
-            printf("True");
-            printf("\n");
-        }
-            
-        }
-        else if (user == 'C')
-        {
-           int ans= func3(mat);
-           if (ans == 0)
-    {
-        printf("-1");
-        printf("\n");
-    }
-    else
-    {
-        printf("%d", ans);
-        printf("\n");
-    }
-         }
-        if (user=='D'){
-            return 0;
-        }else{
-            scanf("%c", &user); 
-        }
- 
+            ans = func2(matrix);
+            ans==1?printf("True\n"):printf("False\n");
         
+        }
+    else if (input == 'C') 
+    {
+        ans = func3(matrix);
+        printf("%d\n" , ans);
     }
-   return 0;
+    if(input == 'D')
+    {
+    return 0;    
+    }       
+    else
+    {
+        scanf("%c" , &input);
+    }
+    
+    }
+    return 0;
 }
