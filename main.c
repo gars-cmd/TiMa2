@@ -45,10 +45,7 @@ int main(int argc, char const *argv[])
     {
     return 0;    
     }       
-    else
-    {
         scanf("%c" , &input);
-    }
     
     }
     return 0;
