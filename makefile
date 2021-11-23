@@ -15,4 +15,4 @@ connections: main.o libmy_mat.a
 	gcc $(FLAG) -o connections main.o libmy_mat.a 
 
 clean:
-	rm -f *.o *.a 
+	rm -f *.o *.a connections
